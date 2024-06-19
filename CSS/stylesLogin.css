@@ -6,6 +6,7 @@ body, html {
   font-family: Arial, sans-serif;
   height: 100%;
   display: flex;
+  background-color: white;
   flex-direction: column;
   text-align: center;
   overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
@@ -154,22 +155,15 @@ nav .nav-center p {
 }
 
 .menu-icon{
-  .menu-icon {
-      display: block;
-      font-size: 20px;
-      cursor: pointer;
-  }
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
 }
-
-
-
 
 .app-download {
   background-color: #fff;
   padding: 50px 0;
 }
-
-
 
 .content p {
   font-size: 50px; 
@@ -185,12 +179,9 @@ nav .nav-center p {
   text-rendering: optimizeLegibility; 
   outline: none; 
   margin-top: -10px;
-  
 }
 
 .content p span {
-
-
   font-size: 50px;
   color: rgba(63, 63, 63, 1);
   font-family: "Ubuntu";
@@ -199,12 +190,7 @@ nav .nav-center p {
   line-height: 1;
   font-weight: bold;
   line-height: 1.2;
-
-
 }
-
-
-
 
 .container {
   max-width: 800px;
@@ -271,6 +257,61 @@ nav .nav-center p {
     width: 55%;
     margin-bottom: 10px;
   }
+}
+
+/* Estilos para el formulario */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 60px; /* Ajuste para la barra de navegación fija */
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.9); /* Cambio de fondo */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  color: white; /* Cambio de color de texto */
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: white; /* Cambio de color de texto */
+}
+
+.login-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white; /* Cambio de color de texto */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white; /* Cambio de color de texto */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo del campo de entrada */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(192, 192, 192); /* Cambio de color del botón */
+  color: black; /* Color del texto del botón */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #c0c0c0; /* Cambio de color del botón al pasar el ratón */
 }
 
 /* Estilos para el pie de página */
