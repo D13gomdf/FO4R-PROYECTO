@@ -1,305 +1,305 @@
 /* Estilos globales */
 body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
 }
 
 /* Estilos para la barra de navegación */
 header {
-    background-color: rgba(0, 0, 0, 0.9); /* Transparencia */
-    color: white;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.9); /* Transparencia */
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-left {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .nav-right {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Estilos para los elementos de navegación */
 .elementoNavegacion a,
 .elementoNavegacion p {
-    display: block;
-    color: white; /* Color de texto predeterminado */
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin: 0;
-    transition: opacity 0.3s ease; /* Transición para la opacidad del texto */
-    font-weight: bold;
-    font-size: 17px;
-    position: relative;
+  display: block;
+  color: white; /* Color de texto predeterminado */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 0;
+  transition: opacity 0.3s ease; /* Transición para la opacidad del texto */
+  font-weight: bold;
+  font-size: 17px;
+  position: relative;
 }
 
 /* Estilo para el subrayado del enlace */
 .elementoNavegacion a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Ajusta la posición del subrayado */
-    width: 0; /* Inicialmente no visible */
-    height: 2px;
-    background-color: white; /* Color del subrayado */
-    transition: width 0.3s ease; /* Transición para la animación del subrayado */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Ajusta la posición del subrayado */
+  width: 0; /* Inicialmente no visible */
+  height: 2px;
+  background-color: white; /* Color del subrayado */
+  transition: width 0.3s ease; /* Transición para la animación del subrayado */
 }
 
 .elementoNavegacion a:hover::after {
-    width: 100%; /* Ancho completo del subrayado al pasar el ratón */
+  width: 100%; /* Ancho completo del subrayado al pasar el ratón */
 }
 
 /* Estilo para el enlace activo */
 .elementoNavegacion a.active {
-    opacity: 0.7; /* Texto semi-transparente para el enlace activo */
-    color: rgba(192, 192, 192);
+  opacity: 0.7; /* Texto semi-transparente para el enlace activo */
+  color: rgba(192, 192, 192);
 }
 
 .elementoNavegacion a.active::after {
-    width: 100%; /* Asegura que el subrayado esté presente en el enlace activo */
+  width: 100%; /* Asegura que el subrayado esté presente en el enlace activo */
 }
 
 .elementoNavegacionboton {
-    text-align: center;
+  text-align: center;
 }
 
 .boton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    height: 2.5rem;
-    width: 180px;
-    margin: 0.5rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border: none;
-    border-radius: 6.25rem;
-    background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    box-shadow: rgba(50, 50, 50, 0.349) 1px 4px 16px -6px;
-    cursor: pointer;
-    outline: 0;
-    vertical-align: middle;
-    overflow: hidden;
-    position: relative;
-    transform: translate3d(0px, 0px, 0px);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 2.5rem;
+  width: 180px;
+  margin: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: 6.25rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  box-shadow: rgba(50, 50, 50, 0.349) 1px 4px 16px -6px;
+  cursor: pointer;
+  outline: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+  transform: translate3d(0px, 0px, 0px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .boton:hover {
-    background: rgba(0, 0, 0, 0); /* Cambio de fondo al pasar el ratón */
-    box-shadow: rgba(0, 0, 0, 0.7) 1px 4px 20px -6px; /* Aumenta la sombra al pasar el ratón */
-    border: solid white 2px; /* Borde blanco de 2px al pasar el ratón */
+  background: rgba(0, 0, 0, 0); /* Cambio de fondo al pasar el ratón */
+  box-shadow: rgba(0, 0, 0, 0.7) 1px 4px 20px -6px; /* Aumenta la sombra al pasar el ratón */
+  border: solid white 2px; /* Borde blanco de 2px al pasar el ratón */
 }
 
 .boton:active {
-    transform: translateY(0px);
-    box-shadow: rgba(0, 0, 0, 0.3) 1px 4px 10px -6px inset;
+  transform: translateY(0px);
+  box-shadow: rgba(0, 0, 0, 0.3) 1px 4px 10px -6px inset;
 }
 
 .boton:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Contorno de foco personalizado */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Contorno de foco personalizado */
 }
 
 nav .nav-center {
-    text-align: center;
-    flex-grow: 2;
-    margin: 0 auto; 
-    margin-right:93px;
+  text-align: center;
+  flex-grow: 2;
+  margin: 0 auto; 
+  margin-right:93px;
 }
 
 nav .nav-center p {
-    margin: 0;
-    padding: 14px 16px;
-    font-weight: bold;
-    font-size: 20px;
+  margin: 0;
+  padding: 14px 16px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .menu-icon{
-    .menu-icon {
-        display: block;
-        font-size: 20px;
-        cursor: pointer;
-    }
+  .menu-icon {
+      display: block;
+      font-size: 20px;
+      cursor: pointer;
+  }
 }
 
 
 
 
 .app-download {
-    background-color: #fff;
-    padding: 50px 0;
-  }
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+
+
+.content p {
+  font-size: 50px; 
+  color: #000000; 
+  margin-bottom: 40px; 
+  text-align: center; 
+  font-family: "Ubuntu", sans-serif; 
+  font-weight: bold; 
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+  line-height: 1; 
+  -webkit-font-smoothing: antialiased;
+  transition: color 0.3s ease; 
+  text-rendering: optimizeLegibility; 
+  outline: none; 
+  margin-top: -10px;
   
+}
 
- 
-  .content p {
-    font-size: 50px; 
-    color: #000000; 
-    margin-bottom: 40px; 
-    text-align: center; 
-    font-family: "Ubuntu", sans-serif; 
-    font-weight: bold; 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
-    line-height: 1; 
-    -webkit-font-smoothing: antialiased;
-    transition: color 0.3s ease; 
-    text-rendering: optimizeLegibility; 
-    outline: none; 
-    margin-top: -10px;
-    
-  }
-
-  .content p span {
+.content p span {
 
 
-    font-size: 50px;
-    color: rgba(63, 63, 63, 1);
-    font-family: "Ubuntu";
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-    transition: color 0.3s ease;
-    line-height: 1;
-    font-weight: bold;
-    line-height: 1.2;
+  font-size: 50px;
+  color: rgba(63, 63, 63, 1);
+  font-family: "Ubuntu";
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease;
+  line-height: 1;
+  font-weight: bold;
+  line-height: 1.2;
 
 
-  }
+}
 
 
 
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 55px;
-    margin-bottom: 60px;
-  }
-  
-  .content {
-    margin-bottom: 20px;
-  }
-  
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 60px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.store-button:hover {
+  background-color: rgba(63, 63, 63, 1);
+}
+
+.play-store {
+  background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
+}
+
+.app-store {
+  background-color: rgba( 0,0,0,0.9);
+   /* Color azul de la App Store */
+}
+
+.store-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  margin-bottom: 2px;
+  margin-left: -8px;
+}
+
+/* Media Query para botones responsivos */
+@media (max-width: 600px) {
   .store-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .store-button {
-    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    width: 80%;
-    border-radius: 25px;
   }
-  
-  .store-button:hover {
-    background-color: rgba(63, 63, 63, 1);
+
+  .store-button {
+    width: 55%;
+    margin-bottom: 10px;
   }
-  
-  .play-store {
-    background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
-  }
-  
-  .app-store {
-    background-color: rgba( 0,0,0,0.9);
-     /* Color azul de la App Store */
-  }
-  
-  .store-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    margin-bottom: 2px;
-    margin-left: -8px;
-  }
-  
-  /* Media Query para botones responsivos */
-  @media (max-width: 600px) {
-    .store-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .store-button {
-      width: 55%;
-      margin-bottom: 10px;
-    }
-  }
+}
 
 /* Estilos para el pie de página */
 footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: auto;
-    border-top: 2px solid rgba(192, 192, 192, 1);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
+  border-top: 2px solid rgba(192, 192, 192, 1);
 }
 
 footer span a{
-    display: inline-block;
-    text-align: center;
-    text-decoration: underline;
-    color: white;
-    margin: 0 auto;
-    margin-left: 682px;
-    font-family: "Nanum Myeongjo";
-    font-weight: bold;
-    letter-spacing: 1.3px; 
+  display: inline-block;
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+  margin: 0 auto;
+  margin-left: 682px;
+  font-family: "Nanum Myeongjo";
+  font-weight: bold;
+  letter-spacing: 1.3px; 
 }
 
 footer a:visited {
-    color: rgba(139, 139, 139, 0.374);
+  color: rgba(139, 139, 139, 0.374);
 }
 
 footer a:hover {
-    color: rgba(58, 225, 255, 0.538);
+  color: rgba(58, 225, 255, 0.538);
 }
