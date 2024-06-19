@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuenta Four</title>
+    <link rel="stylesheet" href="./../CSS/stylesCuentaFour.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nanum+Myeongjo&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- BARRA DE NAVEGACION -->
     <header>
         <nav>
-            <ul>
+            <ul class="nav-left">
                 <li class="elementoNavegacion">
                     <a href="index.html">Inicio</a>
                 </li>
@@ -17,25 +24,30 @@
                     <a href="tarjeta4.html">Tarjeta 4</a>
                 </li>
                 <li class="elementoNavegacion">
-                    <a href="cuentaFour.html" >Cuenta Four</a>
+                    <a href="cuentaFour.html">Cuenta Four</a>
                 </li>
-                <li class="elementoNavegacion">
-                    <p>FO4R</p>
+            </ul>
+            <div class="nav-center">
+                <p>FO4R</p>
+            </div>
+            <ul class="nav-right">
+                <li class="elementoNavegacionboton">
+                    <a href="login.html" class="boton">Quiero formar parte</a>
                 </li>
-                <li class="elementoNavegacion">
-                    <a href="login.html">Quiero ser cliente FO4R</a>
+                <li class="menu-icon" onclick="toggleMenu()">
+                    <span>&#9776;</span> <!-- Este es tu icono de hamburguesa -->
                 </li>
             </ul>
         </nav>
     </header>
 
-
+    
 
     <!-- FOOTER -->
     <footer>
-        <ul>
+        <ul> 
             <li class="elementosFooter">
-                <a href="footer/terminosCondiciones.html">Terminos y Condiciones</a>
+                <span><a href="footer/terminosCondiciones.html">Términos y Condiciones</a></span> 
             </li>
         </ul>
     </footer>
