@@ -1,15 +1,123 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Arvo');
+
 /* Estilos globales */
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arvo', Arial, sans-serif;
   height: 100%;
   display: flex;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo de la página */
   flex-direction: column;
   text-align: center;
   overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+main {
+  margin-top: 100px; /* Ajuste para evitar la superposición con la barra de navegación fija */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo del formulario */
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid white; /* Borde blanco del formulario */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 20px; /* Espacio hacia abajo para separación del footer */
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: calc(100% - 20px); /* Restar el padding para que los inputs sean del mismo tamaño */
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid white; /* Borde blanco del input */
+  border-radius: 4px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white; /* Color del texto cuando no está enfocado */
+  margin: 0 auto; /* Margen automático para centrado */
+  display: block; /* Asegurar que el input sea un bloque para que los márgenes automáticos funcionen */
+  transition: background-color 0.3s ease;
+}
+
+.input-field input:focus {
+  color: black; /* Color del texto cuando está enfocado */
+  background-color: white;
+}
+
+.input-field label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  color: #ccc;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: -15px;
+  left: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.input-field input:valid ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 16px;
+  padding: 0 2px;
+  background: #060b23;
+  transition: all 0.3s ease; /* Animación para la transición */
+}
+
+.iconicfill-pen-alt2 {
+    position: absolute;
+    left: 10px;
+    color: #fff;
+    font-size: 19px;
+    opacity: 1;
+    top: -2px;
+    transform: translateX(-100px);
+    animation: move-pen 1s ease-in infinite alternate;
+}
+
+@keyframes move-pen {
+    from {
+        transform: translateX(-4px) rotate(6deg);
+    }
+    to {
+        transform: translateX(4px) rotate(-3deg);
+    }
+}
+
+.submit-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Ocupar el ancho completo del formulario */
+}
+
+.submit-btn:hover {
+  background-color: #555;
 }
 
 /* Estilos para la barra de navegación */
@@ -50,7 +158,6 @@ ul {
   justify-content: flex-end;
 }
 
-/* Estilos para los elementos de navegación */
 .elementoNavegacion a,
 .elementoNavegacion p {
   display: block;
@@ -65,7 +172,6 @@ ul {
   position: relative;
 }
 
-/* Estilo para el subrayado del enlace */
 .elementoNavegacion a::after {
   content: '';
   position: absolute;
@@ -81,7 +187,6 @@ ul {
   width: 100%; /* Ancho completo del subrayado al pasar el ratón */
 }
 
-/* Estilo para el enlace activo */
 .elementoNavegacion a.active {
   opacity: 0.7; /* Texto semi-transparente para el enlace activo */
   color: rgba(192, 192, 192);
@@ -144,7 +249,7 @@ nav .nav-center {
   text-align: center;
   flex-grow: 2;
   margin: 0 auto; 
-  margin-right:93px;
+  margin-right: 93px; /* Ajuste específico para centrar y alinear correctamente */
 }
 
 nav .nav-center p {
@@ -154,96 +259,10 @@ nav .nav-center p {
   font-size: 20px;
 }
 
-.menu-icon{
+.menu-icon {
   display: block;
   font-size: 20px;
   cursor: pointer;
-}
-
-.app-download {
-  background-color: #fff;
-  padding: 50px 0;
-}
-
-.content p {
-  font-size: 50px; 
-  color: #000000; 
-  margin-bottom: 40px; 
-  text-align: center; 
-  font-family: "Ubuntu", sans-serif; 
-  font-weight: bold; 
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
-  line-height: 1; 
-  -webkit-font-smoothing: antialiased;
-  transition: color 0.3s ease; 
-  text-rendering: optimizeLegibility; 
-  outline: none; 
-  margin-top: -10px;
-}
-
-.content p span {
-  font-size: 50px;
-  color: rgba(63, 63, 63, 1);
-  font-family: "Ubuntu";
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  transition: color 0.3s ease;
-  line-height: 1;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 55px;
-  margin-bottom: 60px;
-}
-
-.content {
-  margin-bottom: 20px;
-}
-
-.store-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.store-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  width: 80%;
-  border-radius: 25px;
-}
-
-.store-button:hover {
-  background-color: rgba(63, 63, 63, 1);
-}
-
-.play-store {
-  background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
-}
-
-.app-store {
-  background-color: rgba( 0,0,0,0.9);
-   /* Color azul de la App Store */
-}
-
-.store-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
-  margin-bottom: 2px;
-  margin-left: -8px;
 }
 
 /* Media Query para botones responsivos */
@@ -256,62 +275,7 @@ nav .nav-center p {
   .store-button {
     width: 55%;
     margin-bottom: 10px;
-  }
-}
-
-/* Estilos para el formulario */
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-top: 60px; /* Ajuste para la barra de navegación fija */
-}
-
-.login-form {
-  background-color: rgba(0, 0, 0, 0.9); /* Cambio de fondo */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  color: white; /* Cambio de color de texto */
-}
-
-.login-form h2 {
-  margin-bottom: 20px;
-  color: white; /* Cambio de color de texto */
-}
-
-.login-form label {
-  display: block;
-  text-align: left;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: white; /* Cambio de color de texto */
-}
-
-.login-form input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: white; /* Cambio de color de texto */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo del campo de entrada */
-}
-
-.login-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: rgb(192, 192, 192); /* Cambio de color del botón */
-  color: black; /* Color del texto del botón */
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.login-form button:hover {
-  background-color: #c0c0c0; /* Cambio de color del botón al pasar el ratón */
+      }
 }
 
 /* Estilos para el pie de página */
@@ -325,7 +289,7 @@ footer {
   border-top: 2px solid rgba(192, 192, 192, 1);
 }
 
-footer span a{
+footer span a {
   display: inline-block;
   text-align: center;
   text-decoration: underline;
@@ -344,3 +308,4 @@ footer a:visited {
 footer a:hover {
   color: rgba(58, 225, 255, 0.538);
 }
+

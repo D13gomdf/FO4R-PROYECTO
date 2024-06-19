@@ -41,34 +41,39 @@
         </nav>
     </header>
 
-    <!-- FORMULARIO DE LOGIN/REGISTRO -->
-    <div class="form-container">
+<main>
         <form class="login-form">
-            <h2>Registrarse</h2>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="apellidoPaterno">Apellido Paterno</label>
-            <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
-
-            <label for="apellidoMaterno">Apellido Materno</label>
-            <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
-
-            <label for="fechaNacimiento">Fecha de Nacimiento</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required>
-
-            <button type="submit">Enviar</button>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Nombre</label>
+            </div>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Apellido Paterno</label>
+            </div>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Apellido Materno</label>
+            </div>
+            <div class="input-field">
+                <input type="date" required>
+                <label>Fecha de Nacimiento</label>
+            </div>
+            <div class="input-field">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="input-field">
+                <input type="tel" required>
+                <label>Teléfono</label>
+            </div>
+            <button type="submit" class="submit-btn">Iniciar Sesión</button>
         </form>
-    </div>
+    </main>
     
     <!-- FOOTER -->
     <footer>
