@@ -1,0 +1,380 @@
+/* Estilos globales */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+/* Estilos para la barra de navegación */
+header {
+    background-color: rgba(0, 0, 0, 0.9); /* Transparencia */
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    flex-grow: 1;
+}
+
+.nav-right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilos para los elementos de navegación */
+.elementoNavegacion a,
+.elementoNavegacion p {
+    display: block;
+    color: white; /* Color de texto predeterminado */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0;
+    transition: opacity 0.3s ease; /* Transición para la opacidad del texto */
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Estilo para el subrayado del enlace */
+.elementoNavegacion a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta la posición del subrayado */
+    width: 0; /* Inicialmente no visible */
+    height: 2px;
+    background-color: white; /* Color del subrayado */
+    transition: width 0.3s ease; /* Transición para la animación del subrayado */
+}
+
+.elementoNavegacion a:hover::after {
+    width: 100%; /* Ancho completo del subrayado al pasar el ratón */
+}
+
+/* Estilo para el enlace activo */
+.elementoNavegacion a.active {
+    opacity: 0.7; /* Texto semi-transparente para el enlace activo */
+    color: rgba(192, 192, 192);
+}
+
+.elementoNavegacion a.active::after {
+    width: 100%; /* Asegura que el subrayado esté completo para el enlace activo */
+}
+
+/* Estilos para el texto central */
+.nav-center p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+.elementoNavegacionboton {
+    text-align: center;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 2.5rem;
+    width: 180px;
+    margin: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: none;
+    border-radius: 6.25rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    box-shadow: rgba(50, 50, 50, 0.349) 1px 4px 16px -6px;
+    cursor: pointer;
+    outline: 0;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: rgba(0, 0, 0, 0); /* Cambio de fondo al pasar el ratón */
+    box-shadow: rgba(0, 0, 0, 0.7) 1px 4px 20px -6px; /* Aumenta la sombra al pasar el ratón */
+    border: solid white 2px; /* Borde blanco de 2px al pasar el ratón */
+}
+
+.boton:active {
+    transform: translateY(0px);
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 4px 10px -6px inset;
+}
+
+.boton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Contorno de foco personalizado */
+}
+
+
+/* Estilos para el menú hamburguesa */
+
+
+
+.menu-icon {
+    display: block; /* Asegura que el elemento sea un bloque */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse */
+}
+
+.menu-icon span {
+    font-size: 20px; /* Ajusta el tamaño del icono según sea necesario */
+    display: inline-block; /* Asegura que el icono esté alineado correctamente */
+    line-height: 1; /* Ajusta el espaciado vertical si es necesario */
+}
+
+@media screen and (max-width: 600px) {
+    .menu-icon {
+        /* Estilos específicos para pantallas de hasta 600px de ancho */
+        position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .menu-icon {
+        /* Estilos específicos para pantallas de hasta 600px de ancho */
+        position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+
+
+
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Color de fondo del menú desplegable */
+        position: absolute;
+        top: 60px; /* Justo debajo de la barra de navegación */
+        left: 0;
+    }
+
+    .nav-left.show,
+    .nav-right.show {
+        display: flex;
+    }
+
+    .nav-left .elementoNavegacion,
+    .nav-right .elementoNavegacionboton {
+        width: 100%;
+    }
+
+    .nav-left .elementoNavegacion a,
+    .nav-right .elementoNavegacionboton a.boton {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria */
+    }
+}
+
+.resaltar {
+    color: rgb(0, 191, 255);
+}
+
+.resaltar4 {
+    color: orange;
+}
+
+/* Estilos para las secciones de la tarjeta */
+.seccionTarjeta1,
+.seccionTarjeta2,
+.seccionTarjeta3,
+.seccionTarjeta4,
+.seccionTarjeta5 {
+    margin-top: 60px; /* Añade un margen superior para evitar que el contenido quede oculto bajo la barra de navegación */
+    padding: 20px;
+}
+
+/* Estilos específicos para las secciones */
+.contenedorTarjeta1,
+.contenedorTarjeta2,
+.contenedorTarjeta3,
+.contenedorTarjeta4,
+.contenedorTarjeta5 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Ajustes para los detalles */
+details {
+    margin-top: 10px;
+}
+
+details[open] {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.app-download {
+    background-color: #fff;
+    padding: 50px 0;
+  }
+  
+
+ 
+  .content p {
+    font-size: 50px; 
+    color: #000000; 
+    margin-bottom: 40px; 
+    text-align: center; 
+    font-family: "Ubuntu", sans-serif; 
+    font-weight: bold; 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased;
+    transition: color 0.3s ease; 
+    text-rendering: optimizeLegibility; 
+    outline: none; 
+    margin-top: -10px;
+    
+  }
+
+  .content p span {
+
+
+    font-size: 50px;
+    color: rgba(63, 63, 63, 1);
+    font-family: "Ubuntu";
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+    line-height: 1;
+    font-weight: bold;
+    line-height: 1.2;
+
+
+  }
+
+
+
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 60px;
+  }
+  
+  .content {
+    margin-bottom: 20px;
+  }
+  
+  .store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .store-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    border-radius: 25px;
+  }
+  
+  .store-button:hover {
+    background-color: rgba(63, 63, 63, 1);
+  }
+  
+  .play-store {
+    background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
+  }
+  
+  .app-store {
+    background-color: rgba( 0,0,0,0.9);
+     /* Color azul de la App Store */
+  }
+  
+  .store-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    margin-bottom: 2px;
+    margin-left: -8px;
+  }
+  
+  /* Media Query para botones responsivos */
+  @media (max-width: 600px) {
+    .store-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .store-button {
+      width: 55%;
+      margin-bottom: 10px;
+    }
+  }
+
+
+

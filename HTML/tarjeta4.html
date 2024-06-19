@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjeta 4</title>
+    <title>FO4R</title>
+    <link rel="stylesheet" href="./../CSS/stylesTarjeta4.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nanum+Myeongjo&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- BARRA DE NAVEGACION -->
     <header>
         <nav>
-            <ul>
+            <ul class="nav-left">
                 <li class="elementoNavegacion">
                     <a href="index.html">Inicio</a>
                 </li>
@@ -17,13 +22,18 @@
                     <a href="tarjeta4.html">Tarjeta 4</a>
                 </li>
                 <li class="elementoNavegacion">
-                    <a href="cuentaFour.html" >Cuenta Four</a>
+                    <a href="cuentaFour.html">Cuenta Four</a>
                 </li>
-                <li class="elementoNavegacion">
-                    <p>FO4R</p>
+            </ul>
+            <div class="nav-center">
+                <p>FO4R</p>
+            </div>
+            <ul class="nav-right">
+                <li class="elementoNavegacionboton">
+                    <a href="login.html" class="boton">Quiero formar parte</a>
                 </li>
-                <li class="elementoNavegacion">
-                    <a href="login.html">Quiero ser cliente FO4R</a>
+                <li class="menu-icon" onclick="toggleMenu()">
+                    <span>&#9776;</span> <!-- Este es tu icono de hamburguesa -->
                 </li>
             </ul>
         </nav>
@@ -31,64 +41,89 @@
 
     <main>
         <section class="seccionTarjeta1">
-            <div class="imagenFondoTarjeta">
-                <h1>La tarjeta de credito sin anualidad ni cobros sorpresa</h1>
-                <a href="login.html"><button>Quiero ser cliente</button></a>
+            <div class="contenedorTarjeta1">
+                <div class="imagenFondoTarjeta">
+                    <h1>La tarjeta de <span>credito</span> sin anualidad ni cobros sorpresa</h1>
+                    <a href="login.html"><button>Quiero ser cliente</button></a>
+                </div>
             </div>
         </section>
 
-        <section class="seccionTarjeta2">
-            <h4><span class="resaltar">Atencion humana</span> para que tengas la mejor relacion con tu dinero</h4>
-        </section>
+        <section class="app-download">
+            <div class="container">
+              <div class="content">
+                <p>Tú decides cómo
+                    <br><span>controlar tu dinero,</span>
+                    <br>todo desde la app</p>
+              </div>
+              <div class="store-buttons">
+                <a href="https://play.google.com/store/games?hl=es_MX" class="store-button play-store">
+                  <img src="./../googleplay.png" alt="Google Play" class="store-icon">
+                  Descargar en <br>Google Play
+                </a>
+                <a href="https://www.apple.com/mx/app-store/" class="store-button app-store">
+                  <img src="./../appstore.png" alt="App Store" class="store-icon">
+                  Descargar en <br>App Store
+                </a>
+              </div>
+            </div>
+          </section>
 
         <section class="seccionTarjeta3">
-            <div class="contenedorGrandeTarjeta">
-                <div>
-                    <p>FO4R <span class="resaltar">te libera</span> de estas comisiones:</p>
-                </div>
-                <div>
-                    <img src=" " class="iconosSeccion3">
-                    <p>Sin anualidad</p>
-                </div>
-                <div>
-                    <img src=" " class="iconosSeccion3">
-                    <p>Sin penalizaciones por uso minimo</p>
-                </div>
-                <div>
-                    <img src=" " class="iconosSeccion3">
-                    <p>Sin cobros por reposicion si pierdes o roban tu FO4R</p>
+            <div class="contenedorTarjeta3">
+                <div class="contenedorGrandeTarjeta">
+                    <div>
+                        <p>FO4R <span class="resaltar">te libera</span> de estas comisiones:</p>
+                    </div>
+                    <div>
+                        <img src="placeholder.png" alt="Sin anualidad" class="iconosSeccion3">
+                        <p>Sin anualidad</p>
+                    </div>
+                    <div>
+                        <img src="placeholder.png" alt="Sin penalizaciones por uso minimo" class="iconosSeccion3">
+                        <p>Sin penalizaciones por uso minimo</p>
+                    </div>
+                    <div>
+                        <img src="placeholder.png" alt="Sin cobros por reposicion" class="iconosSeccion3">
+                        <p>Sin cobros por reposicion si pierdes o roban tu FO4R</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="seccionTarjeta4">
-            <div class="contenedorSeccionTarjeta4">
-                <h4><span class="resaltar">Tarjeta garantizada FO4R</span> una opcion para entrarle al credito</h4>
-                <p><span class="resaltar">¡Con buen uso,</span> podria mejorar tu historial crediticio!</p>  
-            </div>
-            <details> 
-                <summary>¿Cuál es la diferencia con la tarjeta de creidto FO4R?</summary>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati, consectetur aperiam sint animi quasi harum aspernatur ipsam suscipit perferendis et eius autem possimus dolor similique dignissimos voluptate, in fuga!</p>
-            </details>
-            <details>
-                <summary>¿Cómo funciona?</summary>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt expedita dolore neque qui aliquam!</p>
-            </details>
-            <details>
-                <summary>¿Qué pasa?</summary>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam atque ducimus officia, voluptates nemo possimus vel quam iure fugit repellendus!</p>
-            </details>
-        </section>
-        <section class="seccionTarjeta5">
-            <div class="imagenSeccion5Tarjeta">
-                <img src="" alt="">
-            </div>
-            <div class="contenedorTxtSeccion5Tarjeta">
-                <div class="contenedorPequeñoArriba">
-                    <h2>Subtitulo</h2>
+            <div class="contenedorTarjeta4">
+                <div class="contenedorSeccionTarjeta4">
+                    <h4><span class="resaltar4">Tarjeta garantizada FO4R</span> una opcion para entrarle al credito</h4>
+                    <p><span class="resaltar4">¡Con buen uso,</span> podria mejorar tu historial crediticio!</p>  
                 </div>
-                <div class="contenedorPequeñoAbajo">
-                    <h2>Subtitulo</h2>
+                <details> 
+                    <summary>¿Cuál es la diferencia con la tarjeta de creidto FO4R?</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati, consectetur aperiam sint animi quasi harum aspernatur ipsam suscipit perferendis et eius autem possimus dolor similique dignissimos voluptate, in fuga!</p>
+                </details>
+                <details>
+                    <summary>¿Cómo funciona?</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt expedita dolore neque qui aliquam!</p>
+                </details>
+                <details>
+                    <summary>¿Qué pasa?</summary>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam atque ducimus officia, voluptates nemo possimus vel quam iure fugit repellendus!</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="seccionTarjeta5">
+            <div class="contenedorTarjeta5">
+                <div class="imagenSeccion5Tarjeta">
+                    <img src="placeholder.png" alt="Seccion 5">
+                </div>
+                <div class="contenedorTxtSeccion5Tarjeta">
+                    <div class="contenedorPequeñoArriba">
+                        <h2>Subtitulo</h2>
+                    </div>
+                    <div class="contenedorPequeñoAbajo">
+                        <h2>Subtitulo</h2>
+                    </div>
                 </div>
             </div>
         </section>
@@ -98,9 +133,11 @@
     <footer>
         <ul>
             <li class="elementosFooter">
-                <a href="footer/terminosCondiciones.html">Terminos y Condiciones</a>
+                <span><a href="footer/terminosCondiciones.html">Terminos y Condiciones</a></span> 
             </li>
         </ul>
     </footer>
+   
+    <script src="./../navbar.js"></script>
 </body>
 </html>

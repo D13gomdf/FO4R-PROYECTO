@@ -724,6 +724,8 @@ section {
     color: rgb(0, 0, 0); /* Color principal */
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     transition: color 0.3s ease;
+    text-decoration:none ;
+
     
 }
 
@@ -747,6 +749,18 @@ section {
     transition: color 0.3s ease;
     line-height: 1;
 }
+
+
+.contenedorCuenta a{
+
+    text-decoration: none;
+}
+
+.contenedorTarjeta a{
+
+    text-decoration: none;
+}
+
 
 @media (max-width: 768px) {
     nav ul {
