@@ -1,3 +1,18 @@
+//responsive y Nv hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    var menuIcon = document.querySelector('.menu-icon');
+    var navLeft = document.querySelector('.nav-left');
+
+    if (menuIcon) {
+        menuIcon.addEventListener('click', function() {
+            navLeft.classList.toggle('active');
+        });
+    }
+});
+
+
+
+
 //indicador barra de navegación
 document.addEventListener('DOMContentLoaded', function() {
     // Obtener la URL de la página actual
@@ -13,17 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active'); // Agregar clase activa si es la página actual
         }
     });
-});
-
-
-//responsive y Nv hamburguesa
-document.addEventListener('DOMContentLoaded', function() {
-    var menuIcon = document.querySelector('.menu-icon');
-    var navLeft = document.querySelector('.nav-left');
-
-    if (menuIcon) {
-        menuIcon.addEventListener('click', function() {
-            navLeft.classList.toggle('active');
-        });
-    }
 });

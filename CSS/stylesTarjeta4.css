@@ -87,23 +87,186 @@ ul {
 }
 
 .elementoNavegacion a.active::after {
-    width: 100%; /* Asegura que el subrayado esté completo para el enlace activo */
+    width: 100%; /* Asegura que el subrayado esté presente en el enlace activo */
 }
-
-/* Estilos para el texto central */
-.nav-center p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-
 
 .elementoNavegacionboton {
     text-align: center;
 }
 
-.boton {
+nav .nav-center {
+    text-align: center;
+    flex-grow: 2;
+    margin: 0 auto; 
+    margin-right:93px;
+}
+
+nav .nav-center p {
+    margin: 0;
+    padding: 14px 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-left {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+        text-align: center;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-left.active {
+        display: flex;
+    }
+
+    .nav-left li {
+        margin: 10px 0;
+    }
+
+    .nav-right {
+        flex-grow: 0;
+    }
+
+    .menu-icon {
+        position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+        top: 10px;
+        right: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    
+    .elementoNavegacionboton {
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        
+
+    }
+}
+
+.app-download {
+    background-color: #fff;
+    padding: 50px 0;
+  }
+
+  .content p {
+    font-size: 50px; 
+    color: #000000; 
+    margin-bottom: 40px; 
+    text-align: center; 
+    font-family: "Ubuntu", sans-serif; 
+    font-weight: bold; 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased;
+    transition: color 0.3s ease; 
+    text-rendering: optimizeLegibility; 
+    outline: none; 
+    margin-top: -10px;
+    
+  }
+
+  .content p span {
+
+
+    font-size: 50px;
+    color: rgba(63, 63, 63, 1);
+    font-family: "Ubuntu";
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+    line-height: 1;
+    font-weight: bold;
+    line-height: 1.2;
+
+
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 60px;
+  }
+  
+  .content {
+    margin-bottom: 20px;
+  }
+  
+  .store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .store-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 20%;
+    border-radius: 25px;
+    
+}
+  
+  .store-button:hover {
+    background-color: rgba(63, 63, 63, 1);
+  }
+  
+  .play-store {
+    background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
+  }
+  
+  .app-store {
+    background-color: rgba( 0,0,0,0.9);
+     /* Color azul de la App Store */
+  }
+  
+  .store-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    margin-bottom: 2px;
+    margin-left: -8px;
+  }
+  
+  /* Media Query para botones responsivos */
+  @media (max-width: 600px) {
+    .store-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .store-button {
+      width: 55%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .boton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,20 +311,12 @@ ul {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Contorno de foco personalizado */
 }
 
-
-/* Estilos para el menú hamburguesa */
-
-
-
+/* Estilos para el menú de hamburguesa */
 .menu-icon {
-    display: block; /* Asegura que el elemento sea un bloque */
-    cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse */
-}
-
-.menu-icon span {
-    font-size: 20px; /* Ajusta el tamaño del icono según sea necesario */
-    display: inline-block; /* Asegura que el icono esté alineado correctamente */
-    line-height: 1; /* Ajusta el espaciado vertical si es necesario */
+    position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -172,8 +327,6 @@ ul {
         right: 10px;
     }
 }
-
-
 @media screen and (min-width: 769px) {
     .menu-icon {
         /* Estilos específicos para pantallas de hasta 600px de ancho */
@@ -185,196 +338,140 @@ ul {
     }
 }
 
-
-
-
-
-/* Mostrar el menú hamburguesa en pantallas pequeñas */
-@media (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .menu-icon {
-        display: flex;
-    }
-
-    .nav-left,
-    .nav-right {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.9); /* Color de fondo del menú desplegable */
-        position: absolute;
-        top: 60px; /* Justo debajo de la barra de navegación */
-        left: 0;
-    }
-
-    .nav-left.show,
-    .nav-right.show {
-        display: flex;
-    }
-
-    .nav-left .elementoNavegacion,
-    .nav-right .elementoNavegacionboton {
-        width: 100%;
-    }
-
-    .nav-left .elementoNavegacion a,
-    .nav-right .elementoNavegacionboton a.boton {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria */
+        /* Estilos específicos para pantallas de hasta 600px de ancho */
+        position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        
     }
 }
 
-.resaltar {
-    color: rgb(0, 191, 255);
+/* Estilos para la sección */
+.seccionTarjeta1 {
+    padding: 40px 0; /* Espaciado interno para la sección */
+    background-color: #f0f0f0; /* Color de fondo opcional */
 }
 
-.resaltar4 {
-    color: orange;
+/* Estilos para el contenedor principal */
+.contenedorTarjeta1 {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    width: 100%;
+    margin: 0 auto; /* Centra el contenedor en la página */
 }
 
-/* Estilos para las secciones de la tarjeta */
-.seccionTarjeta1,
-.seccionTarjeta2,
-.seccionTarjeta3,
-.seccionTarjeta4,
-.seccionTarjeta5 {
-    margin-top: 60px; /* Añade un margen superior para evitar que el contenido quede oculto bajo la barra de navegación */
-    padding: 20px;
-}
-
-/* Estilos específicos para las secciones */
-.contenedorTarjeta1,
-.contenedorTarjeta2,
-.contenedorTarjeta3,
-.contenedorTarjeta4,
-.contenedorTarjeta5 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Ajustes para los detalles */
-details {
-    margin-top: 10px;
-}
-
-details[open] {
-    margin-bottom: 10px;
-}
-
-
-
-
-
-.app-download {
-    background-color: #fff;
-    padding: 50px 0;
-  }
-  
-
- 
-  .content p {
-    font-size: 50px; 
-    color: #000000; 
-    margin-bottom: 40px; 
-    text-align: center; 
-    font-family: "Ubuntu", sans-serif; 
-    font-weight: bold; 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
-    line-height: 1; 
-    -webkit-font-smoothing: antialiased;
-    transition: color 0.3s ease; 
-    text-rendering: optimizeLegibility; 
-    outline: none; 
-    margin-top: -10px;
-    
-  }
-
-  .content p span {
-
-
-    font-size: 50px;
-    color: rgba(63, 63, 63, 1);
-    font-family: "Ubuntu";
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-    transition: color 0.3s ease;
-    line-height: 1;
-    font-weight: bold;
-    line-height: 1.2;
-
-
-  }
-
-
-
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 55px;
-    margin-bottom: 60px;
-  }
-  
-  .content {
-    margin-bottom: 20px;
-  }
-  
-  .store-buttons {
+/* Estilos para el contenido interno (texto y imagen) */
+.contenidoTarjeta {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .store-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 8px;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para el texto */
+.texto {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 20px;
+    background-color: #fff; /* Color de fondo del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.texto h1 {
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.texto span {
+    color: #007bff; /* Color para resaltar el texto */
+}
+
+/* Estilos para el botón */
+.texto button {
+    display: block; /* Para ocupar todo el ancho disponible */
+    margin-top: 20px; /* Espacio superior */
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 80%;
-    border-radius: 25px;
-  }
-  
-  .store-button:hover {
-    background-color: rgba(63, 63, 63, 1);
-  }
-  
-  .play-store {
-    background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
-  }
-  
-  .app-store {
-    background-color: rgba( 0,0,0,0.9);
-     /* Color azul de la App Store */
-  }
-  
-  .store-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    margin-bottom: 2px;
-    margin-left: -8px;
-  }
-  
-  /* Media Query para botones responsivos */
-  @media (max-width: 600px) {
-    .store-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .store-button {
-      width: 55%;
-      margin-bottom: 10px;
-    }
-  }
+}
+
+.texto button:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilos para la imagen */
+.imagen {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 20px;
+    background-color: #fff; /* Color de fondo de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra la imagen horizontalmente */
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados de la imagen */
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+    border-top: 2px solid rgba(192, 192, 192, 1);
+}
+
+footer span a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    margin: 0 auto;
+    margin-left: 682px;
+    font-family: "Nanum Myeongjo";
+    font-weight: bold;
+    letter-spacing: 1.3px; 
+}
+
+footer a:visited {
+    color: rgba(139, 139, 139, 0.374);
+}
+
+footer a:hover {
+    color: rgba(58, 225, 255, 0.538);
+}
