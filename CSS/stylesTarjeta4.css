@@ -380,15 +380,32 @@ nav .nav-center p {
 }
 
 .texto h1 {
-    font-size: 3rem;
-    color: #333;
-    line-height: 1.2;
+    font-size: 3.5rem;
+    color: black;
+    
     font-weight: bold;
     margin-top: 50px;
+    font-family: "Ubuntu";
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased;
+    transition: color 0.3s ease; 
+    text-rendering: optimizeLegibility; 
+    outline: none; 
+  
 }
 
 .texto span {
     color: grey; /* Color para resaltar el texto */
+
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased;
+    transition: color 0.3s ease; 
+    text-rendering: optimizeLegibility; 
+    outline: none; 
+  
+
 }
 
 /* Estilos para el botón */
@@ -396,7 +413,7 @@ nav .nav-center p {
     display: block;
     margin-top: 20px;
     padding: 12px 24px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     background-color: black;
     color: white;
     border: none;
@@ -406,7 +423,17 @@ nav .nav-center p {
     margin-left:153px ;
     margin-top: -20px;
     width: 250px;
+    font-family: "Ubuntu";
+    font-weight: bold;  
 }
+
+
+.no-underline {
+
+    text-decoration: none;
+
+}
+
 
 .texto button:hover {
     background-color: grey; /* Cambia el color al pasar el cursor */
