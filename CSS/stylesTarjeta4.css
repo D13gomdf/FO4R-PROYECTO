@@ -369,6 +369,7 @@ nav .nav-center p {
     align-items: center; /* Centra verticalmente los elementos */
 }
 
+
 /* Estilos para el texto */
 .texto {
     flex: 1; /* Ocupa todo el espacio disponible */
@@ -379,30 +380,36 @@ nav .nav-center p {
 }
 
 .texto h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #333;
-    line-height: 1.4;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-top: 50px;
 }
 
 .texto span {
-    color: #007bff; /* Color para resaltar el texto */
+    color: grey; /* Color para resaltar el texto */
 }
 
 /* Estilos para el botón */
 .texto button {
-    display: block; /* Para ocupar todo el ancho disponible */
-    margin-top: 20px; /* Espacio superior */
+    display: block;
+    margin-top: 20px;
     padding: 12px 24px;
     font-size: 1.2rem;
-    background-color: #007bff;
+    background-color: black;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 35px;
+    margin-left:153px ;
+    margin-top: -20px;
+    width: 250px;
 }
 
 .texto button:hover {
-    background-color: #0056b3; /* Cambia el color al pasar el cursor */
+    background-color: grey; /* Cambia el color al pasar el cursor */
 }
 
 /* Estilos para la imagen */
@@ -413,33 +420,89 @@ nav .nav-center p {
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     text-align: center; /* Centra la imagen horizontalmente */
+    
 }
 
 .imagen img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Bordes redondeados de la imagen */
+    border-radius: 8px;
+    width: 90%;
+    margin-top: 25px;
+    transform:rotate(45deg);
+    margin-left: 60px;
+}
+
+.seccionTarjeta3{
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.contenedorTarjeta3{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedorGrandeTarjeta > div{
+    margin-bottom: 20px;
+}
+.contenedorGrandeTarjeta p{
+    font-size: 24px;
+    color: black;
+}
+.contenedorGrandeTarjeta p span{
+    color: grey;
+}
+.iconosSeccion3{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 
+.seccionTarjeta4 {
+    background-color: #333;
+    color: white;
+    padding: 60px 20px;
+}
 
+.contenedorTarjeta4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contenedorTarjeta4 h4{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.contenedorSeccionTarjeta4 h4 span{
+    color: grey;
+}
+.contenedorSeccionTarjeta4 p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.contenedorSeccionTarjeta4 p span{
+    color: grey;
+}
+.seccionTarjeta5{
+    background-color: white;
+    padding: 60px 20px;
+}
+.contenedorTarjeta5 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.imagenSeccionTarjeta5 img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
 
 
 
