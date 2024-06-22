@@ -24,7 +24,7 @@ main {
 }
 
 .login-form {
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo del formulario */
+  background-color: rgba(0,0, 0, 0.9); /* Fondo del formulario */
   padding: 20px;
   border-radius: 8px;
   border: 2px solid white; /* Borde blanco del formulario */
@@ -40,68 +40,66 @@ main {
 }
 
 .input-field input {
-  width: calc(100% - 20px); /* Restar el padding para que los inputs sean del mismo tamaño */
+  width: calc(100% - 20px); /* Ajuste para mantener el ancho especificado */
   padding: 10px;
   font-size: 16px;
-  border: 2px solid white; /* Borde blanco del input */
-  border-radius: 4px;
-  outline: none;
+  border: 2px solid white; /*Borde blanco del input*/
   background-color: rgba(255, 255, 255, 0.1);
-  color: white; /* Color del texto cuando no está enfocado */
-  margin: 0 auto; /* Margen automático para centrado */
-  display: block; /* Asegurar que el input sea un bloque para que los márgenes automáticos funcionen */
-  transition: background-color 0.3s ease;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .input-field input:focus {
-  color: black; /* Color del texto cuando está enfocado */
+  color: black;
   background-color: white;
 }
 
 .input-field label {
   position: absolute;
-  top: 10px;
   left: 10px;
+  top: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 13px;
   pointer-events: none;
-  transition: all 0.2s ease-in-out;
-  color: #ccc;
+  transition: transform 0.2s, color 0.3s;
 }
 
-.input-field input:focus + label,
-.input-field input:not(:placeholder-shown) + label {
-  top: -15px;
-  left: 10px;
-  font-size: 12px;
+.input-field label span {
+  display: inline-block;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.input-field input:focus + label span,
+.input-field input:not(:placeholder-shown) + label span {
+  transform: translateY(-38px);
   color: #fff;
 }
 
-.input-field input:valid ~ label {
-  top: 0;
-  left: 15px;
-  font-size: 16px;
-  padding: 0 2px;
-  background: #060b23;
-  transition: all 0.3s ease; /* Animación para la transición */
-}
-
 .iconicfill-pen-alt2 {
-    position: absolute;
-    left: 10px;
-    color: #fff;
-    font-size: 19px;
-    opacity: 1;
-    top: -2px;
-    transform: translateX(-100px);
-    animation: move-pen 1s ease-in infinite alternate;
+  position: absolute;
+  left: 10px;
+  color: #fff;
+  font-size: 19px;
+  opacity: 1;
+  top: -2px;
+  transform: translateX(-50px);
+  animation: move-pen 1s ease-in infinite alternate;
 }
 
 @keyframes move-pen {
-    from {
-        transform: translateX(-4px) rotate(6deg);
-    }
-    to {
-        transform: translateX(4px) rotate(-3deg);
-    }
+  from {
+    transform: translateX(-4px) rotate(6deg);
+  }
+  to {
+    transform: translateX(4px) rotate(-3deg);
+  }
 }
 
 .submit-btn {
