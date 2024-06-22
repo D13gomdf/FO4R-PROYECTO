@@ -173,7 +173,7 @@ nav .nav-center p {
     text-align: center; 
     font-family: "Ubuntu", sans-serif; 
     font-weight: bold; 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
     line-height: 1; 
     -webkit-font-smoothing: antialiased;
     transition: color 0.3s ease; 
@@ -352,7 +352,7 @@ nav .nav-center p {
 /* Estilos para la sección */
 .seccionTarjeta1 {
     padding: 40px 0; /* Espaciado interno para la sección */
-    background-color: #f0f0f0; /* Color de fondo opcional */
+    background-color: rgba(192, 192, 192, 1); /* Color de fondo opcional */
 }
 
 /* Estilos para el contenedor principal */
@@ -360,6 +360,8 @@ nav .nav-center p {
     max-width: 1200px; /* Ancho máximo del contenedor */
     width: 100%;
     margin: 0 auto; /* Centra el contenedor en la página */
+    margin-top: 25px;
+    margin-bottom: 25px; 
 }
 
 /* Estilos para el contenido interno (texto y imagen) */
@@ -374,37 +376,34 @@ nav .nav-center p {
 .texto {
     flex: 1; /* Ocupa todo el espacio disponible */
     padding: 20px;
-    background-color: #fff; /* Color de fondo del texto */
+    background-color: rgba(192, 192, 192, 1); /* Color de fondo del texto */
     border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .texto h1 {
     font-size: 3.5rem;
     color: black;
-    
     font-weight: bold;
     margin-top: 50px;
     font-family: "Ubuntu";
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
-    line-height: 1; 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+    line-height: 1.1; 
     -webkit-font-smoothing: antialiased;
     transition: color 0.3s ease; 
     text-rendering: optimizeLegibility; 
     outline: none; 
-  
+    
 }
 
 .texto span {
-    color: grey; /* Color para resaltar el texto */
-
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); 
-    line-height: 1; 
+    color: white; /* Color para resaltar el texto */
+    font-family: "Ubuntu";
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); 
+    line-height: 1.1; 
     -webkit-font-smoothing: antialiased;
     transition: color 0.3s ease; 
     text-rendering: optimizeLegibility; 
     outline: none; 
-  
 
 }
 
@@ -421,7 +420,7 @@ nav .nav-center p {
     transition: background-color 0.3s ease;
     border-radius: 35px;
     margin-left:153px ;
-    margin-top: -20px;
+    margin-top: -25px;
     width: 250px;
     font-family: "Ubuntu";
     font-weight: bold;  
@@ -443,93 +442,271 @@ nav .nav-center p {
 .imagen {
     flex: 1; /* Ocupa todo el espacio disponible */
     padding: 20px;
-    background-color: #fff; /* Color de fondo de la imagen */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    text-align: center; /* Centra la imagen horizontalmente */
-    
+    text-align: center; /* Centra la imagen horizontalmente */ 
 }
 
 .imagen img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
     width: 90%;
-    margin-top: 25px;
+    margin-top: 15px;
     transform:rotate(45deg);
-    margin-left: 60px;
+    margin-left: 85px;
 }
 
-.seccionTarjeta3{
-    background-color: white;
-    padding: 60px 20px;
+
+
+/* Estilos para .seccionTarjeta3 */
+.seccionTarjeta3 {
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.contenedorTarjeta3{
+/* Estilos para .contenedorBanner */
+.contenedorBanner {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Para ocultar el desbordamiento de la imagen */
+}
+
+.imagenBanner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos para .contenedorContenido */
+.contenedorContenido {
+    position: relative;
+    z-index: 1; /* Para que esté encima del banner */
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.contenedorGrandeTarjeta > div{
-    margin-bottom: 20px;
-}
-.contenedorGrandeTarjeta p{
-    font-size: 24px;
-    color: black;
-}
-.contenedorGrandeTarjeta p span{
-    color: grey;
-}
-.iconosSeccion3{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+/* Estilos para .contenedorTarjeta3 y su contenido según tus necesidades */
+.contenedorTarjeta3 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
-
-.seccionTarjeta4 {
-    background-color: #333;
-    color: white;
-    padding: 60px 20px;
-}
-
-.contenedorTarjeta4 {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: left;
-}
-.contenedorTarjeta4 h4{
-    font-size: 24px;
+.encabezadoTarjeta3 {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.contenedorSeccionTarjeta4 h4 span{
-    color: grey;
+
+.textoEncabezado p {
+    font-size: 1.5rem;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #333;
 }
-.contenedorSeccionTarjeta4 p{
-    font-size: 18px;
-    margin-bottom: 20px;
+
+.textoEncabezado span {
+    color: #6a1b9a;
+    font-weight: bold;
 }
-.contenedorSeccionTarjeta4 p span{
-    color: grey;
+
+.comisiones {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.seccionTarjeta5{
-    background-color: white;
-    padding: 60px 20px;
-}
-.contenedorTarjeta5 {
-    max-width: 1200px;
-    margin: 0 auto;
+
+.comision {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 300px;
+    margin: 20px 10px;
+    text-align: center;
 }
 
-.imagenSeccionTarjeta5 img{
-    width: 100%;
-    max-width: 400px;
+.iconosSeccion3 {
+    width: 50px;
     height: auto;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .encabezadoTarjeta3, .comisiones {
+        padding: 10px;
+    }
+    
+    .iconosSeccion3 {
+        width: 40px;
+    }
+    
+    .comision {
+        margin: 10px 5px;
+    }
+}
+
+
+/* Estilos para .seccionTarjeta4 */
+.seccionTarjeta4 {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'PT Sans Narrow', sans-serif;
+    overflow: hidden; /* Para ocultar el desbordamiento de la imagen */
+    position: relative; /* Para posicionar el contenido sobre la imagen */
+}
+
+/* Estilos para el contenedor del banner */
+.contenedorBanner {
+    width: 50%;
+    max-width: 50%;
+    overflow: hidden;
+    margin: 0 auto; /* Para centrar horizontalmente */
+    text-align: center;
+    position: relative; /* Agregar posición relativa para usar posición absoluta en el contenido encima */
+}
+
+/* Estilos para la imagen del banner */
+.contenedorBanner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Para ajustar la imagen al tamaño del contenedor */
+}
+
+/* Estilos para el contenido encima de la imagen */
+.contenidoEncima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Color del texto */
+    width: 100%; /* Ajustar el ancho */
+}
+
+/* Estilos para el contenedor del texto */
+.contenedorTexto {
+    background-color: #6a1b9a; /* Color de fondo del lado derecho */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    float: right; /* Alinear a la derecha */
+    width: calc(50% - 20px); /* Ancho del contenedor del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
+/* Estilos para el contenedor del summary */
+.contenedorSummary {
+    background-color: #fff; /* Color de fondo del lado izquierdo */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    float: left; /* Alinear a la izquierda */
+    width: calc(50% - 20px); /* Ancho del contenedor del summary */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Estilos para el título dentro del contenedor del texto */
+.contenedorTexto h4 {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el párrafo dentro del contenedor del texto */
+.contenedorTexto p {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+/* Estilos para el summary */
+summary {
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: #6a1b9a;
+    position: relative;
+    padding: 10px;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "\25B6"; /* Unicode for right arrow */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+}
+
+details[open] summary::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Estilos para el contenido de los detalles */
+details p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+
+
+
+.seccionTarjeta5 {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorTarjeta5 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenSeccion5Tarjeta img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.contenedorTxtSeccion5Tarjeta {
+    max-width: 600px;
+    margin: 20px;
+    text-align: left;
+}
+
+.contenedorPequeñoArriba, .contenedorPequeñoAbajo {
+    margin-bottom: 20px;
+}
+
+.contenedorPequeñoArriba h2, .contenedorPequeñoAbajo h2 {
+    font-size: 1.75rem;
+    color: #333;
+}
+
+
+
 
 
 
