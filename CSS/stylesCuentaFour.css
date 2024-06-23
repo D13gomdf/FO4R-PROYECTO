@@ -1,4 +1,3 @@
-
 /* Estilos globales */
 body, html {
   margin: 0;
@@ -246,75 +245,112 @@ nav .nav-center p {
   }
 }
 
-
-
-/* MODIFICACION DE DATOS */
-h1 {
-  font-size: 3.5rem;
-  background-color: rgba( 192,192,192,1);/*color de fondo del texto*/
-  padding: 120px;
-  color: #000000; /* Color de texto para el título */
-  margin-top: 60px; /* Espacio superior */
-  font-weight: bold;
-  font-family: "Ubuntu";
-  text-shadow: 0 8px 5px rgba(0, 0, 0, 0.4);
-  line-height: 1.1;
-  -webkit-font-smoothing: antialiased;
-  transition: color 0.3s ease;
-  text-rendering: optimizeLegibility;
-  outline: none;
-}
-
-/* Estilos para la imagen */
-.imagen{
-  flex: 1; /*ocupa todo el espacio disponible*/
+/* Estilos para los detalles del usuario */
+.user-details {
+  margin-top: 80px;
   padding: 20px;
-  text-align: center; /* Centra la imagen horizontalmente */ 
-}
-.imagen img{
-  max-width: 50%;
-  height: auto;
-  width: 90%;
-  margin-top: 15px;
-  transform: rotate(45deg);
-  margin-left: 85px;
-}
-.data-container {
-  background-color: rgba(134, 132, 132, 0.8); /* Fondo más opaco */
-  padding: 30px;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  margin: 30px auto;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
-  border: 2px solid rgba(3, 8, 83, 0.5); /* Borde con color contrastante */
-  border-radius: 8px;/*Bordes redondeados*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 80px auto 20px auto;
+  text-align: left;
+}
+
+.user-details h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif; 
 }
 
 .data-container p {
-
-  font-size: 20px;
-  color: #010808; /* Color de texto para los datos */
+  font-size: 18px;
   margin: 10px 0;
-  text-align: left; /* Alineación del texto */
-  text-shadow: 0 2px 3px rgba(82, 79, 79, 0.9);
+  font-family: 'Montserrat', sans-serif;
 }
 
-.data-container b {
+.data-container .label {
   font-weight: bold;
-  color: rgb(3, 8, 83); /* Color de texto para la parte destacada */
+  color: #555;
 }
 
-/* Media Query para ajustar estilos en dispositivos pequeños */
-@media (max-width: 600px) {
-  .data-container {
-      padding: 10px;
-      max-width: 300px;
-  }
-
-  .data-container p {
-      font-size: 16px;
-  }
+.data-container .valoresDatos {
+  font-weight: normal;
+  color: #777;
 }
+
+/* APARTADO DE FOTO DE PERFIL */
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#changeProfileImageButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#changeProfileImageButton:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.action-buttons button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.action-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la sección de noticias */
+.news {
+  margin: 20px 0;
+}
+
+.news h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.news p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 
 /* Estilos para el pie de página */
 footer {
