@@ -1,3 +1,4 @@
+
 //responsive y Nv hamburguesa
 document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.querySelector('.menu-icon');
@@ -9,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
 
 
 
@@ -29,39 +29,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
-
-
-//animacion imagenes tarjetas
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleccionar las imágenes de las tarjetas de cada sección
-    const tarjeta1 = document.querySelector('.seccionTarjeta1 .imagen img');
-    const tarjeta5 = document.querySelector('.seccionTarjeta5 .contenedorImagen img');
-
-    // Configuración del Tilt (animación)
-    VanillaTilt.init(tarjeta1, {
-        max: 25,      // Máximo grado de inclinación
-        speed: 400,   // Velocidad de la animación
-        glare: true,  // Habilitar el efecto de brillo
-        "max-glare": 0.5  // Intensidad del brillo
-    });
-
-    VanillaTilt.init(tarjeta5, {
-        max: 25,      // Máximo grado de inclinación
-        speed: 400,   // Velocidad de la animación
-        glare: true,  // Habilitar el efecto de brillo
-        "max-glare": 0.5  // Intensidad del brillo
-    });
-});
-
-
-
-
-
-
-
-
-
-

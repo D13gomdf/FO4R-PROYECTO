@@ -1,9 +1,10 @@
+
 /* Estilos globales */
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Arial, sans-serif;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,74 @@ ul {
   text-align: center;
 }
 
+nav .nav-center {
+  text-align: center;
+  flex-grow: 2;
+  margin: 0 auto; 
+  margin-right:93px;
+}
+
+nav .nav-center p {
+  margin: 0;
+  padding: 14px 16px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .nav-left {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 10px 0;
+      text-align: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+  }
+
+  .nav-left.active {
+      display: flex;
+  }
+
+  .nav-left li {
+      margin: 10px 0;
+  }
+
+  .nav-right {
+      flex-grow: 0;
+  }
+
+  .menu-icon {
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      
+  }
+
+  main {
+      padding: 0 10px;
+  }
+
+  
+  .elementoNavegacionboton {
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      
+
+  }
+}
+
+
 .boton {
   display: flex;
   align-items: center;
@@ -139,139 +208,45 @@ ul {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Contorno de foco personalizado */
 }
 
-nav .nav-center {
-  text-align: center;
-  flex-grow: 2;
-  margin: 0 auto; 
-  margin-right:93px;
+/* Estilos para el menú de hamburguesa */
+.menu-icon {
+  position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
-nav .nav-center p {
-  margin: 0;
-  padding: 14px 16px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.menu-icon{
+@media screen and (max-width: 600px) {
   .menu-icon {
-      display: block;
-      font-size: 20px;
+      /* Estilos específicos para pantallas de hasta 600px de ancho */
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu-icon {
+      /* Estilos específicos para pantallas de hasta 600px de ancho */
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
       cursor: pointer;
+      display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+      /* Estilos específicos para pantallas de hasta 600px de ancho */
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      
   }
 }
 
 
-
-
-.app-download {
-  background-color: #fff;
-  padding: 50px 0;
-}
-
-
-
-.content p {
-  font-size: 50px; 
-  color: #000000; 
-  margin-bottom: 40px; 
-  text-align: center; 
-  font-family: "Ubuntu", sans-serif; 
-  font-weight: bold; 
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
-  line-height: 1; 
-  -webkit-font-smoothing: antialiased;
-  transition: color 0.3s ease; 
-  text-rendering: optimizeLegibility; 
-  outline: none; 
-  margin-top: -10px;
-  
-}
-
-.content p span {
-
-
-  font-size: 50px;
-  color: rgb(62, 59, 59);
-  font-family: "Ubuntu";
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-  transition: color 0.3s ease;
-  line-height: 1;
-  font-weight: bold;
-  line-height: 1.2;
-
-
-}
-
-
-
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 55px;
-  margin-bottom: 60px;
-}
-
-.content {
-  margin-bottom: 20px;
-}
-
-.store-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.store-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  width: 80%;
-  border-radius: 25px;
-}
-
-.store-button:hover {
-  background-color: rgba(63, 63, 63, 1);
-}
-
-.play-store {
-  background-color: rgba( 0,0,0,0.9); /* Color verde de Google Play */
-}
-
-.app-store {
-  background-color: rgba( 0,0,0,0.9);
-   /* Color azul de la App Store */
-}
-
-.store-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
-  margin-bottom: 2px;
-  margin-left: -8px;
-}
-
-/* Media Query para botones responsivos */
-@media (max-width: 600px) {
-  .store-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .store-button {
-    width: 55%;
-    margin-bottom: 10px;
-  }
-}
 
 /* MODIFICACION DE DATOS */
 h1 {

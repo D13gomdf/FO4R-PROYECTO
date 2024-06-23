@@ -23,27 +23,31 @@ main {
   background-color: rgba(0, 0, 0, 0.9); /* Fondo del formulario */
   padding: 20px;
   border-radius: 8px;
-  border: 2px solid white; /* Borde blanco del formulario */
+  border: 2px solid rgba(50, 50, 50, 0.349); /* Borde blanco del formulario */
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   width: 90%;
   max-width: 400px;
-  margin-bottom: 20px; /* Espacio hacia abajo para separación del footer */
+  margin-bottom: 90px; /* Espacio hacia abajo para separación del footer */
+  margin-top: 20px;
+  align-items: center;
+  margin-left:40px; 
 }
 
 .input-field {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .input-field input {
   width: 85%;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid white; /*Borde blanco del input*/
+  border: 2px solid rgba(120, 120, 120, 1);
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   outline: none;
-  border-radius: 4px;
+  border-radius:9px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -61,14 +65,15 @@ main {
 
 .input-field label {
   position: absolute;
-  left: 50px;
-  /* POSICION INICIAL DEL LABEL */
+  left: 30px;
   top: 0%; 
   transform: translateY(-300%);
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   pointer-events: none;
   transition: transform 0.3s ease, color 0.3s ease;
+  font-family: "Ubuntu";
+  font-weight: bold;
 }
 
 .input-field input:focus + label,
@@ -79,15 +84,22 @@ main {
 }
 
 .submit-btn {
-  background-color: #333;
+  background-color: rgba(50, 50, 50, 0.349);
   color: white;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 9px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
-  width: 100%; /* Ocupar el ancho completo del formulario */
+  width: 95%;
+  box-shadow: 0 0 10px rgba(80,80,80,0.1);
+  font-family: "Ubuntu";
+  font-weight: bold;
+
+
+  /*Ocuparelanchocompletodelformulario*/
+  
 }
 
 .submit-btn:hover {
@@ -250,6 +262,99 @@ nav .nav-center p {
       margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+      /* Estilos específicos para pantallas de hasta 600px de ancho */
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu-icon {
+      /* Estilos específicos para pantallas de hasta 600px de ancho */
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-icon {
+      /* Estilos específicos para pantallas de hasta 600px de ancho */
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      
+  }
+}
+
+@media (max-width: 600px) {
+  .store-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-button {
+    width: 55%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-left {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 10px 0;
+      text-align: center;
+      transition: all 0.3s ease;
+      z-index: 1000;
+  }
+
+  .nav-left.active {
+      display: flex;
+  }
+
+  .nav-left li {
+      margin: 10px 0;
+  }
+
+  .nav-right {
+      flex-grow: 0;
+  }
+
+  .menu-icon {
+      position: fixed; /* Ejemplo de posición fija para que el icono se mantenga en su lugar */
+      top: 10px;
+      right: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      
+  }
+
+  main {
+      padding: 0 10px;
+  }
+
+  
+  .elementoNavegacionboton {
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      
+
+  }
+}
+
 
 /* Estilos para el pie de página */
 footer {
