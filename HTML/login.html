@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
+    <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="./../CSS/stylesLogin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nanum+Myeongjo&family=Oswald:wght@200..700&family=PT+Sans+Narrow:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- BARRA DE NAVEGACION -->
@@ -41,45 +38,44 @@
         </nav>
     </header>
 
-<main>
-        <form class="login-form">
+    <main>
+        <form class="login-form" id="loginForm">
             <div class="input-field">
-                <input type="text" required>
+                <input type="text" id="nombre" required>
                 <label>Nombre</label>
             </div>
             <div class="input-field">
-                <input type="text" required>
+                <input type="text" id="apellidoPaterno" required>
                 <label>Apellido Paterno</label>
             </div>
             <div class="input-field">
-                <input type="text" required>
+                <input type="text" id="apellidoMaterno" required>
                 <label>Apellido Materno</label>
             </div>
             <div class="input-field">
-                <input type="date" required>
-                <label>Fecha de Nacimiento</label>
-            </div>
-            <div class="input-field">
-                <input type="email" required>
+                <input type="email" id="correo" required>
                 <label>Email</label>
             </div>
             <div class="input-field">
-                <input type="password" required>
+                <input type="password" id="password" required>
                 <label>Contraseña</label>
             </div>
             <div class="input-field">
-                <input type="tel" required>
+                <input type="tel" id="telefono" required>
                 <label>Teléfono</label>
             </div>
             <button type="submit" class="submit-btn">Iniciar Sesión</button>
         </form>
     </main>
     
+    <script src="./../JS/animations.js"></script>
+    <script src="./../JS/registroLocal.js"></script>
+
     <!-- FOOTER -->
     <footer>
-        <ul>
+        <ul> 
             <li class="elementosFooter">
-                <a href="footer/terminosCondiciones.html">Terminos y Condiciones</a>
+                <span><a href="./terminosCondiciones.html">Términos y Condiciones</a></span> 
             </li>
         </ul>
     </footer>
