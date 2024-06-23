@@ -464,6 +464,7 @@ nav .nav-center p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'PT Sans Narrow', sans-serif;
+    margin-top: -50px;
 }
 
 /* Estilos para .contenedorBanner */
@@ -476,65 +477,82 @@ nav .nav-center p {
     justify-content: space-between;
     align-items: flex-start;
     text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    
+       
 }
 
 .imagenBanner {
     width: 100%;
     height: auto;
     display: block;
+   
 }
 
-/* Estilos para .contenedorContenido */
 .contenedorContenido {
     position: relative;
-    z-index: 1; /* Para que esté encima del banner */
+    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 100px;
+    width: 100%;
 }
 
-/* Estilos para .contenedorTarjeta3 y su contenido según tus necesidades */
 .contenedorTarjeta3 {
     position: relative;
     z-index: 1;
     text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
 
 .encabezadoTarjeta3 {
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center;
 }
 
 .textoEncabezado p {
-    font-size: 1.5rem;
-    font-family: 'PT Sans Narrow', sans-serif;
-    color: #333;
+    font-size: 3.5rem;
+    font-family: "Ubuntu";
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin-top: -10px;
 }
 
 .textoEncabezado span {
-    color: rgba(255, 176, 58, 0.788);
+    color: rgba(90, 90, 90, 1);
     font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .comisiones {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 35px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+   
 }
 
-.comision {
+.comision-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 300px;
-    margin: 20px 10px;
     text-align: center;
+    margin-top: -30px;
 }
 
 .iconosSeccion3 {
@@ -542,6 +560,21 @@ nav .nav-center p {
     height: auto;
     margin-bottom: 10px;
 }
+
+.comision-item p {
+    margin: 0;
+    padding: 0;
+    cursor: text;
+    font-family: "Ubuntu";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contenedorTarjeta3:hover .comisiones {
+    opacity: 1;
+}
+
+
 
 @media (max-width: 768px) {
     .encabezadoTarjeta3, .comisiones {
@@ -567,16 +600,22 @@ nav .nav-center p {
     font-family: 'PT Sans Narrow', sans-serif;
     overflow: hidden; /* Para ocultar el desbordamiento de la imagen */
     position: relative; /* Para posicionar el contenido sobre la imagen */
+    margin-top: -150px;
 }
 
 /* Estilos para el contenedor del banner */
 .contenedorBanner {
-    width: 50%;
-    max-width: 50%;
+    width: 1300px;
+    max-width: 100%;
     overflow: hidden;
-    margin: 0 auto; /* Para centrar horizontalmente */
+    margin: 0 auto;
     text-align: center;
-    position: relative; /* Agregar posición relativa para usar posición absoluta en el contenido encima */
+    position: relative;
+    height: 150px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-bottom: -50px;
+    
 }
 
 /* Estilos para la imagen del banner */
@@ -596,56 +635,78 @@ nav .nav-center p {
     justify-content: space-between;
     align-items: flex-start;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: -200px;
+    
 }
 
 /* Estilos para el contenedor del texto */
 .contenedorTexto {
-    background-color: rgba(255, 176, 58, 0.788); /* Color de fondo del lado derecho */
+    background-color: white; /* Color de fondo del lado derecho */
     padding: 5px;
     border-radius: 10px;
     text-align: left;
     width: calc(50% - 10px); /* Ancho del contenedor del texto */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
     justify-content: space-between;
     align-items: flex-start;
+    margin-right: 10px;
+    z-index: 1;
+    font-family: "Ubuntu";
 }
 
 /* Estilos para el contenedor del summary */
 .contenedorSummary {
-    background-color: #fff; /* Color de fondo del lado izquierdo */
+    background-color: white; /* Color de fondo del lado izquierdo */
     padding: 20px;
     border-radius: 10px;
     text-align: left;
     width: calc(50% - 20px); /* Ancho del contenedor del summary */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
     justify-content: space-between;
     align-items: flex-end;
+    margin-left: 10px;
+    z-index: 1;
+    font-family: "Ubuntu";
+    text-align: center;
+    
 }
 
 /* Estilos para el título dentro del contenedor del texto */
 .contenedorTexto h4 {
     font-size: 1.75rem;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.9);
     margin-bottom: 10px;
+    text-align: center;
+    font-family: "Ubuntu";
+    margin-top: 37px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
 /* Estilos para el párrafo dentro del contenedor del texto */
 .contenedorTexto p {
     font-size: 1.25rem;
-    color: #fff;
+    color: rgba(90, 90, 90, 1);
+    text-align: center;
+    font-family: "Ubuntu";
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    line-height: 1.1; 
 }
 
 /* Estilos para el summary */
 summary {
     cursor: pointer;
     font-size: 1.25rem;
-    color: rgba(255, 176, 58, 0.788);
+    color: rgba(0, 0, 0, 0.9);
     position: relative;
     padding: 10px;
     list-style: none;
+    font-family: "Ubuntu";
+    font-weight: bold;
+
 }
 
 summary::-webkit-details-marker {
@@ -653,12 +714,14 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-    content: "\25B6"; /* Unicode for right arrow */
+    content: "+"; /* Unicode for right arrow */
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     transition: transform 0.2s ease-in-out;
+
+
 }
 
 details[open] summary::after {
@@ -668,68 +731,66 @@ details[open] summary::after {
 /* Estilos para el contenido de los detalles */
 details p {
     margin-top: 10px;
-    color: #333;
+    color: rgba(63, 63, 63, 1);
     font-size: 1rem;
-}
-
-
-
-
-.seccionTarjeta5 {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contenedorTarjeta5 {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagenSeccion5Tarjeta img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.contenedorTxtSeccion5Tarjeta {
-    max-width: 600px;
-    margin: 20px;
     text-align: left;
 }
 
-.contenedorPequeñoArriba{
-    margin-bottom: 30px;
-    background-color: rgb(252, 254, 255);
-    padding: 15px 20px;
-    border-radius: 10px;
-}
-.contenedorPequeñoAbajo{
-    margin-bottom: 30px;
-    background-color: rgba(255, 176, 58, 0.788);
-    padding: 15px 20px;
-    border-radius: 10px;
-}
 
-.contenedorPequeñoArriba h2{
-    font-size: 3rem;
-    color: rgba(255, 176, 58, 0.788);
-    text-align: center;
-    line-height: 1;
-}
-.contenedorPequeñoAbajo h2 {
-    font-size: 3rem;
-    color: rgb(252, 254, 255);
-    text-align: center;
-    line-height: 1;
+details span {
+    margin-top: 10px;
+    color: rgba(63, 63, 63, 1);
+    font-size: 1rem;
+    text-align: left;
+    font-weight: bold;
 }
 
 
 
+/* Estilos generales para el contenedor principal */
+.contenedorGeneral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin-left: 0 auto; /* Centrado horizontal en la página */
+    padding: 40px 20px; /* Espaciado interior */
+    margin-right: 0 auto; 
+    margin-top: 800px;
+}
+
+/* Estilo para la imagen */
+.contenedorImagen {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.contenedorImagen img {
+    max-width: 1105px; /* Ajustar imagen al contenedor */
+    height: auto; /* Altura automática */
+    width: 500px;
+    margin-right: -200px;
+}
+
+/* Estilo para el contenedor de texto */
+.contenedorTexto {
+    flex: 2;
+}
+
+/* Estilos para el título */
+.contenedorTitulo h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+/* Estilos para el subtítulo */
+.contenedorSubtitulo h3 {
+    font-size: 20px;
+    margin: 10px 0 0;
+    color: #555;
+}
 
 
 
@@ -764,4 +825,76 @@ footer a:visited {
 
 footer a:hover {
     color: rgba(58, 225, 255, 0.538);
+}
+
+
+
+
+
+
+
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo ajustable */
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 1.5em;
+    width: calc(33.33% - 2em); /* Ajuste del ancho de las tarjetas */
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d; /* Conserva el estilo 3D para las transformaciones */
+    z-index: 1; /* Z-index inicial para control de apilamiento */
+}
+
+.card:hover {
+    transform: translateY(-20px) rotateZ(3deg) scale(1.05); /* Efecto al pasar el mouse */
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    z-index: 2; /* Asegura que la tarjeta activa esté sobre las demás */
+}
+
+.card a {
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Aumenta la imagen al pasar el mouse */
+}
+
+.card h1 {
+    margin-top: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.card p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 2em); /* Dos tarjetas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Una tarjeta por fila en pantallas pequeñas */
+    }
 }
