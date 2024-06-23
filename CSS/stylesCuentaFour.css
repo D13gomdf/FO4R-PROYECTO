@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@ nav .nav-center p {
 
 
   font-size: 50px;
-  color: rgba(63, 63, 63, 1);
+  color: rgb(62, 59, 59);
   font-family: "Ubuntu";
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   transition: color 0.3s ease;
@@ -275,24 +275,53 @@ nav .nav-center p {
 
 /* MODIFICACION DE DATOS */
 h1 {
+  font-size: 3.5rem;
+  background-color: rgba( 192,192,192,1);/*color de fondo del texto*/
+  padding: 120px;
   color: #000000; /* Color de texto para el título */
-  margin-top: 100px; /* Espacio superior */
+  margin-top: 60px; /* Espacio superior */
+  font-weight: bold;
+  font-family: "Ubuntu";
+  text-shadow: 0 8px 5px rgba(0, 0, 0, 0.4);
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  transition: color 0.3s ease;
+  text-rendering: optimizeLegibility;
+  outline: none;
 }
 
-
-.data-container {
-  background-color: rgba(63, 63, 63, 0.164); /* Fondo semi-transparente */
+/* Estilos para la imagen */
+.imagen{
+  flex: 1; /*ocupa todo el espacio disponible*/
   padding: 20px;
+  text-align: center; /* Centra la imagen horizontalmente */ 
+}
+.imagen img{
+  max-width: 50%;
+  height: auto;
+  width: 90%;
+  margin-top: 15px;
+  transform: rotate(45deg);
+  margin-left: 85px;
+}
+.data-container {
+  background-color: rgba(134, 132, 132, 0.8); /* Fondo más opaco */
+  padding: 30px;
   border-radius: 8px;
-  margin: 20px auto;
+  margin: 30px auto;
   max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+  border: 2px solid rgba(3, 8, 83, 0.5); /* Borde con color contrastante */
+  border-radius: 8px;/*Bordes redondeados*/
 }
 
 .data-container p {
-  font-size: 18px;
-  color: #03736f; /* Color de texto para los datos */
+
+  font-size: 20px;
+  color: #010808; /* Color de texto para los datos */
   margin: 10px 0;
   text-align: left; /* Alineación del texto */
+  text-shadow: 0 2px 3px rgba(82, 79, 79, 0.9);
 }
 
 .data-container b {
