@@ -330,6 +330,7 @@ section {
 
 .seccionIndex1 {
     background-color: rgba(0, 0, 0, 0.9); 
+    margin-bottom: 28px;
 }
 
 .seccionIndex1 h1{
@@ -387,7 +388,7 @@ section {
     font-weight: bolder;
     color: white;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
+    margin-bottom: 43px;
     text-align: center;
     transition: color 0.3s ease;
     line-height: 1;
@@ -552,8 +553,8 @@ section {
     /*Colordeltextoh4*/font-family: "PT Sans Narrow";
     font-weight: bold;
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom:10px;
+    margin-top: 15px;
+    margin-bottom:25px;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     line-height: 1;
     -webkit-font-smoothing: antialiased;

@@ -250,16 +250,18 @@ nav .nav-center p {
   margin-top: 80px;
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
   max-width: 800px;
   margin: 80px auto 20px auto;
-  text-align: left;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 60px;
 }
 
 .user-details h1 {
   font-size: 24px;
-  color: #333;
+  color: black;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif; 
 }
@@ -267,17 +269,20 @@ nav .nav-center p {
 .data-container p {
   font-size: 18px;
   margin: 10px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Ubuntu";
 }
 
 .data-container .label {
   font-weight: bold;
-  color: #555;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Ubuntu";
 }
 
 .data-container .valoresDatos {
   font-weight: normal;
-  color: #777;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Ubuntu";
+  font-weight: bold;
 }
 
 /* APARTADO DE FOTO DE PERFIL */
@@ -299,58 +304,84 @@ nav .nav-center p {
   margin-top: 10px;
   padding: 10px 20px;
   border: none;
-  background-color: #4CAF50;
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   border-radius: 25px;
   cursor: pointer;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  transition: background-color 0.3s;
+
+
 }
 
 #changeProfileImageButton:hover {
-  background-color: #45a049;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para los botones de acción */
 .action-buttons {
   text-align: center;
   margin: 20px 0;
+  margin-top: 15px;
 }
 
 .action-buttons button {
-  background-color: #007BFF;
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  font-size: 16px;
   transition: background-color 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  width: 165px;
+  margin-bottom: 30px;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
 }
 
 .action-buttons button:hover {
-  background-color: #0056b3;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para la sección de noticias */
 .news {
   margin: 20px 0;
+  text-align: center;
+  margin-bottom: -10px;
+
 }
 
 .news h2 {
-  font-size: 20px;
-  color: #333;
+  font-size: 22px;
+  color: black;
   margin-bottom: 10px;
-  font-family: 'Montserrat', sans-serif; 
+  font-family: "Ubuntu"; 
+  font-weight: bold;
+  margin-top: 10px;
+  
 }
 
 .news p {
-  font-size: 16px;
-  color: #555;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
   margin: 5px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Ubuntu";
 }
 
+.news span p{
 
+  margin-bottom: 13px;
+}
 
 /* Estilos para el pie de página */
 footer {

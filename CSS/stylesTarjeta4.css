@@ -360,8 +360,8 @@ nav .nav-center p {
     max-width: 1200px; /* Ancho máximo del contenedor */
     width: 100%;
     margin: 0 auto; /* Centra el contenedor en la página */
-    margin-top: 28px;
-    margin-bottom: 28px; 
+    margin-top: 42px;
+    margin-bottom: 42px; 
 }
 
 /* Estilos para el contenido interno (texto y imagen) */

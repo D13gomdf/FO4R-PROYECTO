@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (correoElemento) correoElemento.textContent = correoRecuperado;
         if (telefonoElemento) telefonoElemento.textContent = telefonoRecuperado;
         if (profileImageElemento && profileImageRecuperado) profileImageElemento.src = profileImageRecuperado;
+        else profileImageElemento.src = "./../profilepicture.png"; // Ruta de la imagen predeterminada
     }
 
     document.getElementById('editButton').addEventListener('click', enableEditing);
@@ -97,3 +98,35 @@ function changeProfileImage() {
     input.click();
     document.body.removeChild(input);
 }
+
+
+//responsive y Nv hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    var menuIcon = document.querySelector('.menu-icon');
+    var navLeft = document.querySelector('.nav-left');
+
+    if (menuIcon) {
+        menuIcon.addEventListener('click', function() {
+            navLeft.classList.toggle('active');
+        });
+    }
+});
+
+
+
+//indicador barra de navegación
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener la URL de la página actual
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Obtener todos los elementos de navegación
+    const navLinks = document.querySelectorAll('.elementoNavegacion a');
+
+    // Iterar sobre los enlaces y comparar con la página actual
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active'); // Agregar clase activa si es la página actual
+        }
+    });
+});
